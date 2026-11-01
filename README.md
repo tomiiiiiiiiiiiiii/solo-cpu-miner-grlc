@@ -21,7 +21,21 @@ Keep the included DLL files in the same folder as the miner.
 
 ## Solo mining
 
-This is a solo miner, not a mining pool. You receive the block reward only if your miner successfully finds a block. Rewards are not guaranteed and depend on your hashrate and the network difficulty.
+The included configuration is intended for solo mining through the [GRLC.eu mining node](https://grlc.eu/miner). You do not need to run your own Garlicoin Core node.
+
+In solo mode, you receive a block reward only when your miner successfully finds a block. Rewards are not guaranteed and depend on your hashrate and network difficulty.
+
+## Pool mining
+
+The included `cpuminer-allium-avx2.exe` and `cpuminer-allium-sse2.exe` are not limited to solo mining. You can also run them directly from Command Prompt with a Stratum pool.
+
+Example using the AVX2 version:
+
+```bat
+cpuminer-allium-avx2.exe -a allium -o stratum+tcp://POOL_HOST:PORT -u WALLET.WORKER -p x
+```
+
+Replace `POOL_HOST`, `PORT`, `WALLET` and `WORKER` with the settings required by your pool. For older CPUs, use `cpuminer-allium-sse2.exe` instead. Pool payouts depend on the pool's rules.
 
 ## Based on cpuminer-opt-allium
 
