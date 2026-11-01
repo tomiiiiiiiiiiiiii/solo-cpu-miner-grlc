@@ -6,7 +6,7 @@ Mine Garlicoin solo using the [GRLC.eu mining node](https://grlc.eu/miner), with
 
 ## Download
 
-**[Download the latest release](https://github.com/tomiiiiiiiiiiiiii/solo-cpu-miner-grlc/releases/latest)**
+**[Download the latest release](https://github.com/tomiiiiiiiiiiiiii/solo-cpu-miner-grlc/releases/download/v.1.1/solo-grlc-cpu-miner_v1.1.zip)**
 
 ## Getting started: solo mining
 
