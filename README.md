@@ -14,7 +14,7 @@ Mine Garlicoin solo using the [GRLC.eu mining node](https://grlc.eu/miner), with
 2. Open `config.txt` and enter your GRLC wallet address and mining settings.
 3. Run **`miner_grlc.exe`** to start solo mining through the [GRLC.eu mining node](https://grlc.eu/miner).
 
-Keep the extracted `bin` and `etc` directories and other included files in place.
+The package keeps the CPU miner executables and required DLL libraries in the `bin` directory. Keep `bin`, `etc` and the other included files in their original locations.
 
 ## Solo mining
 
@@ -24,20 +24,18 @@ In solo mode, you receive a block reward only when your miner successfully finds
 
 ## Pool mining
 
-For pool mining, run a CPU miner executable directly from Command Prompt with your pool's Stratum settings, instead of using the `miner_grlc.exe` solo launcher.
+For pool mining, run a CPU miner executable from the `bin` directory directly from Command Prompt with your pool's Stratum settings, instead of using the `miner_grlc.exe` solo launcher.
 
-- `cpuminer-allium-avx2.exe`: Newer Intel and AMD processors supporting AVX2 and AES-NI.
-- `cpuminer-allium-sse2.exe`: Older 64-bit Intel and AMD processors supporting SSE2.
+- `bin\cpuminer-allium-avx2.exe`: Newer Intel and AMD processors supporting AVX2 and AES-NI.
+- `bin\cpuminer-allium-sse2.exe`: Older 64-bit Intel and AMD processors supporting SSE2.
 
-Open Command Prompt in the folder containing the chosen executable.
-
-Example using the AVX2 version:
+From Command Prompt in the extracted package's main directory, for example:
 
 ```bat
-cpuminer-allium-avx2.exe -a allium -o stratum+tcp://POOL_HOST:PORT -u WALLET.WORKER -p x
+bin\cpuminer-allium-avx2.exe -a allium -o stratum+tcp://POOL_HOST:PORT -u WALLET.WORKER -p x
 ```
 
-Replace `POOL_HOST`, `PORT`, `WALLET` and `WORKER` with the settings required by your pool. For older CPUs, use `cpuminer-allium-sse2.exe` instead. Pool payouts depend on the pool's rules.
+Replace `POOL_HOST`, `PORT`, `WALLET` and `WORKER` with the settings required by your pool. For older CPUs, use `bin\cpuminer-allium-sse2.exe` instead. Keep the DLL files alongside the miner executables in `bin`. Pool payouts depend on the pool's rules.
 
 ## Based on cpuminer-opt-allium
 
