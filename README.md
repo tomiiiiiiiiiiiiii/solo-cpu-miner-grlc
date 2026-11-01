@@ -8,26 +8,28 @@ Mine Garlicoin solo using the [GRLC.eu mining node](https://grlc.eu/miner), with
 
 **[Download the latest release](https://github.com/tomiiiiiiiiiiiiii/solo-cpu-miner-grlc/releases/latest)**
 
-## Getting started
+## Getting started: solo mining
 
 1. Download and extract the ZIP archive.
 2. Open `config.txt` and enter your GRLC wallet address and mining settings.
-3. Run the executable compatible with your CPU:
+3. Run **`miner_grlc.exe`** to start solo mining through the [GRLC.eu mining node](https://grlc.eu/miner).
 
-   - `cpuminer-allium-avx2.exe`: Newer Intel and AMD processors supporting AVX2 and AES-NI.
-   - `cpuminer-allium-sse2.exe`: Older 64-bit Intel and AMD processors supporting SSE2.
-
-Keep the included DLL files in the same folder as the miner.
+Keep the extracted `bin` and `etc` directories and other included files in place.
 
 ## Solo mining
 
-The included configuration is intended for solo mining through the [GRLC.eu mining node](https://grlc.eu/miner). You do not need to run your own Garlicoin Core node.
+**`miner_grlc.exe` is the launcher for the included solo mining setup.** You do not need to run your own Garlicoin Core node.
 
 In solo mode, you receive a block reward only when your miner successfully finds a block. Rewards are not guaranteed and depend on your hashrate and network difficulty.
 
 ## Pool mining
 
-The included `cpuminer-allium-avx2.exe` and `cpuminer-allium-sse2.exe` are not limited to solo mining. You can also run them directly from Command Prompt with a Stratum pool.
+For pool mining, run a CPU miner executable directly from Command Prompt with your pool's Stratum settings, instead of using the `miner_grlc.exe` solo launcher.
+
+- `cpuminer-allium-avx2.exe`: Newer Intel and AMD processors supporting AVX2 and AES-NI.
+- `cpuminer-allium-sse2.exe`: Older 64-bit Intel and AMD processors supporting SSE2.
+
+Open Command Prompt in the folder containing the chosen executable.
 
 Example using the AVX2 version:
 
